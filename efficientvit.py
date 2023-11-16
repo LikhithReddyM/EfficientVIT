@@ -373,7 +373,7 @@ class EfficientViT(torch.nn.Module):
             
             if not isinstance(checkpoint, dict):
                 raise RuntimeError(
-                    f'No state_dict found in checkpoint file {filename}')
+                    f'No state_dict found in checkpoint file')
             # get state_dict from checkpoint
             if 'state_dict' in checkpoint:
                 state_dict = checkpoint['state_dict']
