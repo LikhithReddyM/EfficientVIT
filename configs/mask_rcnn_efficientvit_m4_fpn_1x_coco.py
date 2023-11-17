@@ -1,7 +1,7 @@
 _base_ = [
-    './_base_/models/retinanet_efficientvit_fpn.py',
-    './_base_/datasets/coco_detection.py',
-    './_base_/schedules/schedule_1x.py', 
+    './_base_/models/mask_rcnn_efficientvit_fpn.py',
+    './_base_/datasets/coco_instance.py',
+    './_base_/schedules/schedule_1x.py',
     './_base_/default_runtime.py'
 ]
 
@@ -18,7 +18,7 @@ model = dict(
         out_channels=256,
         start_level=0,
         num_outs=5,
-        num_extra_trans_convs=1,
+        num_extra_trans_convs=2,
         ))
 
 # optimizer
